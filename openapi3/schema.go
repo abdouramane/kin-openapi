@@ -707,7 +707,7 @@ func (schema *Schema) validate(ctx context.Context, stack []*Schema) (err error)
 			// https://json-schema.org/draft/2019-09/release-notes.html#format-vocabulary
 			case "duration", "uuid":
 			// Defined in some other specification
-			case "email", "hostname", "ipv4", "ipv6", "uri", "uri-reference":
+			case "email", "hostname", "ipv4", "ipv6", "uri", "uri-reference", "url":
 			default:
 				// Try to check for custom defined formats
 				if _, ok := SchemaStringFormats[format]; !ok && validationOpts.schemaFormatValidationEnabled {
